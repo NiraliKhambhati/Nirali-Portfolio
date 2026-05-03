@@ -1,0 +1,24 @@
+.footer {
+  background: var(--ink);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 1.5rem 0;
+}
+.footer__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem;
+}
+.footer__name {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 0.95rem; color: rgba(255,255,255,0.35);
+}
+.footer__trail {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.06em;
+  text-transform: uppercase; color: rgba(255,255,255,0.25);
+}
+.footer__sep  { margin: 0 4px; color: rgba(255,255,255,0.15); }
+.footer__current { color: var(--teal2); }
+.footer__year { margin-left: 4px; }
+
+@media (max-width: 768px) {
+  .footer__inner { flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; }
+}

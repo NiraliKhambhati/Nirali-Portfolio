@@ -1,0 +1,87 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: 60px;
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.navbar--scrolled {
+  border-color: var(--border);
+  box-shadow: 0 2px 12px rgba(10,122,126,0.06);
+}
+.navbar__inner {
+  height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.navbar__logo {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.navbar__logo-text {
+  font-family: var(--font-serif); font-size: 1rem;
+  color: var(--ink); font-style: italic;
+}
+.navbar__badge {
+  font-size: 0.58rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #fff;
+  background: var(--teal); padding: 3px 8px; border-radius: 4px;
+}
+.navbar__links {
+  display: flex; gap: 2.5rem; list-style: none;
+}
+.navbar__link {
+  font-size: 0.75rem; font-weight: 500; color: var(--muted);
+  letter-spacing: 0.05em; transition: color 0.2s;
+}
+.navbar__link:hover { color: var(--teal); }
+
+/* Hamburger */
+.navbar__hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: 4px; cursor: pointer;
+}
+.navbar__hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+  transition: var(--transition);
+}
+.navbar__hamburger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar__hamburger--open span:nth-child(2) { opacity: 0; }
+.navbar__hamburger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.navbar__drawer {
+  display: none; flex-direction: column;
+  background: var(--cream); border-top: 1px solid var(--border);
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.navbar__drawer--open { max-height: 400px; padding: 1rem 0; }
+.navbar__drawer-link {
+  padding: 0.875rem 1.25rem; font-size: 0.9rem; font-weight: 500;
+  color: var(--muted); border-bottom: 1px solid var(--border);
+  transition: color 0.2s, background 0.2s;
+}
+.navbar__drawer-link:hover { color: var(--teal); background: var(--teal-pale); }
+.navbar__drawer-resume { color: var(--teal); font-weight: 600; }
+.navbar__drawer-resume:hover { background: var(--teal-pale); }
+
+/* Desktop resume button */
+.navbar__resume-btn {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--teal); white-space: nowrap;
+  border: 1.5px solid var(--teal); border-radius: var(--radius-sm);
+  padding: 0.4rem 0.875rem; transition: var(--transition);
+}
+.navbar__resume-btn:hover { background: var(--teal); color: #fff; }
+
+@media (max-width: 768px) {
+  .navbar__links { display: none; }
+  .navbar__resume-btn { display: none; }
+  .navbar__hamburger { display: flex; }
+  .navbar__drawer { display: flex; }
+}
+@media (max-width: 380px) {
+  .navbar__logo-text { font-size: 0.875rem; }
+  .navbar__badge { font-size: 0.5rem; padding: 2px 6px; }
+}

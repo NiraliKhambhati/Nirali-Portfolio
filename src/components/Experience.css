@@ -1,0 +1,38 @@
+.exp__list { display: flex; flex-direction: column; }
+.exp__item {
+  display: grid; grid-template-columns: 220px 1fr; gap: 3rem;
+  padding: 2.25rem 0; border-bottom: 1px solid var(--border);
+}
+.exp__item:first-child { padding-top: 0; }
+.exp__item:last-child  { border-bottom: none; padding-bottom: 0; }
+
+.exp__period {
+  font-size: 0.78rem; font-weight: 600; color: var(--subtle);
+  letter-spacing: 0.03em; margin-bottom: 4px;
+}
+.exp__loc { font-size: 0.75rem; color: var(--teal2); font-weight: 500; margin-bottom: 6px; }
+
+.exp__role {
+  font-family: var(--font-serif); font-size: 1.05rem;
+  color: var(--ink); margin-bottom: 4px; line-height: 1.3;
+}
+.exp__company { font-size: 0.83rem; font-weight: 600; color: var(--teal); margin-bottom: 1rem; }
+
+.exp__bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.exp__bullets li {
+  font-size: 0.86rem; color: var(--muted);
+  padding-left: 1.1rem; position: relative; line-height: 1.7;
+}
+.exp__bullets li::before {
+  content: ''; position: absolute; left: 0; top: 11px;
+  width: 5px; height: 1.5px; background: var(--teal2);
+}
+.exp__bullets li strong { color: var(--ink); font-weight: 600; }
+
+@media (max-width: 768px) {
+  .exp__item { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem 0; }
+  .exp__item:first-child { padding-top: 0; }
+  .exp__left { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+  .exp__role { font-size: 1rem; }
+  .exp__bullets li { font-size: 0.83rem; }
+}
