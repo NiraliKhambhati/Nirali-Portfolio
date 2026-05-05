@@ -207,6 +207,14 @@ export const experienceData = [
 
 export const projectsData = [
   {
+    impact: "100K pts",
+    type: "AI Agent · RAG Pipeline",
+    title: "Healthcare AI Agent — HEDIS Quality Analytics",
+    desc: "AI-powered HEDIS quality analytics system with RAG pipeline and multi-agent orchestration, enabling natural language querying of clinical measure specifications and automated executive report generation across 100,000 patient records.",
+    tags: ["Python", "Claude AI", "RAG", "ChromaDB", "Streamlit", "2026"],
+    link: "https://nirali-healthcare-ai.streamlit.app",
+  },
+  {
     impact: "↑ Safety",
     type: "Dashboard · Capstone",
     title: "Hospital Safety Analytics — The Leapfrog Group",
