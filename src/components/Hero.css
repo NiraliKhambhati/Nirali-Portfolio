@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 60px; /* navbar height */
   background: var(--cream);
+  overflow: hidden;
 }
 .hero__inner {
   display: grid; grid-template-columns: 1fr 320px;
@@ -79,16 +80,16 @@
   border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1rem;
 }
 .hero__stat {
-  background: var(--white); padding: 1.1rem 1.25rem;
-  display: flex; align-items: center; gap: 1rem;
+  background: var(--white); padding: 0.9rem 1.1rem;
+  display: flex; align-items: center; gap: 0.85rem;
   transition: background 0.2s;
 }
 .hero__stat:hover { background: var(--teal-pale); }
 .hero__stat-n {
-  font-family: var(--font-serif); font-size: 1.75rem; color: var(--teal);
-  min-width: 64px; line-height: 1;
+  font-family: var(--font-serif); font-size: 1.5rem; color: var(--teal);
+  min-width: 60px; line-height: 1;
 }
-.hero__stat-l { font-size: 0.77rem; color: var(--muted); line-height: 1.45; }
+.hero__stat-l { font-size: 0.73rem; color: var(--muted); line-height: 1.4; }
 
 .hero__globe {
   background: var(--cream2); border: 1px solid var(--border);

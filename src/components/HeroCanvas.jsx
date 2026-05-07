@@ -6,8 +6,8 @@ const CANADA = '#e53935';
 
 const STOPS = [
   { pct: 0.08, flag: '🇮🇳', label: 'India',  color: INDIA  },
-  { pct: 0.50, flag: '🇨🇦', label: 'Canada', color: CANADA },
-  { pct: 0.92, flag: '🇺🇸', label: 'USA',    color: TEAL   },
+  { pct: 0.36, flag: '🇨🇦', label: 'Canada', color: CANADA },
+  { pct: 0.62, flag: '🇺🇸', label: 'USA',    color: TEAL   },
 ];
 
 const DRAW_MS  = 6000;
@@ -35,7 +35,7 @@ export default function HeroCanvas() {
 
     function buildPath() {
       pathPoints = [];
-      const midY = height / 2;
+      const midY = height * 0.607;
       const step = 2;
       const beatSpacing = Math.max(200, Math.min(360, width / 5));
       const spike = Math.min(60, Math.max(34, height * 0.08));
@@ -192,12 +192,13 @@ export default function HeroCanvas() {
     }
 
     function drawNextStop(now, arrowProgress) {
-      const last = pathPoints[pathPoints.length - 1];
-      const baseY = last.y;
-      const startX = Math.max(40, last.x - 150);
-      const fullLen = 110;
+      const usa = pointAtPct(STOPS[STOPS.length - 1].pct);
+      const baseY = usa.y;
+      const maxX = width * 0.85;
+      const startX = usa.x + 30;
+      const fullLen = Math.max(60, maxX - startX - 50);
       const arrowLen = fullLen * Math.min(1, arrowProgress * 1.4);
-      const arrowEndX = startX + arrowLen;
+      const arrowEndX = Math.min(startX + arrowLen, maxX - 50);
 
       ctx.save();
       ctx.setLineDash([7, 6]);
@@ -223,7 +224,7 @@ export default function HeroCanvas() {
 
       if (arrowProgress > 0.55) {
         const pulse = (Math.sin(now / 260) + 1) / 2;
-        const dotX = arrowEndX + 26;
+        const dotX = Math.min(arrowEndX + 26, maxX - 20);
         const dotY = baseY;
 
         ctx.strokeStyle = CANADA;
