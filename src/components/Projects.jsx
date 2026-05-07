@@ -12,7 +12,7 @@ export default function Projects() {
       <div className="section-inner container">
         <div className="s-header">
           <div>
-            <p className="s-num">04 — Projects</p>
+            <p className="s-num">05 — Projects</p>
             <h2 className="s-title">Work focused<br/>on <em>impact</em></h2>
           </div>
           <p className="s-right reveal delay-1">

@@ -12,7 +12,7 @@ export default function Experience() {
       <div className="section-inner container">
         <div className="s-header">
           <div>
-            <p className="s-num">03 — Experience</p>
+            <p className="s-num">04 — Experience</p>
             <h2 className="s-title">Where I've<br/><em>worked</em></h2>
           </div>
           <p className="s-right reveal delay-1">

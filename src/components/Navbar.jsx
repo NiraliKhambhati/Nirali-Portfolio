@@ -36,10 +36,11 @@ export default function Navbar() {
 
         <a
           href="/Nirali_Khambhati_Resume.pdf"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="navbar__resume-btn"
         >
-          Download Resume 📄
+          Resume 📄
         </a>
 
         {/* Mobile hamburger */}
@@ -61,11 +62,12 @@ export default function Navbar() {
         ))}
         <a
           href="/Nirali_Khambhati_Resume.pdf"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="navbar__drawer-link navbar__drawer-resume"
           onClick={closeMenu}
         >
-          📄 Download Resume
+          📄 Resume
         </a>
       </div>
     </nav>

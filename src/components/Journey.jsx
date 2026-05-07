@@ -28,7 +28,7 @@ export default function Journey() {
       <div className="section-inner container">
         <div className="s-header">
           <div>
-            <p className="s-num">01 — Career journey</p>
+            <p className="s-num">02 — Career journey</p>
             <h2 className="s-title">From clinic<br/>to <em>analytics</em></h2>
           </div>
           <p className="s-right reveal delay-1">

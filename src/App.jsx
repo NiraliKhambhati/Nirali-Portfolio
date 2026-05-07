@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar     from './components/Navbar';
 import Hero       from './components/Hero';
+import Story      from './components/Story';
 import Journey    from './components/Journey';
 import Skills     from './components/Skills';
 import Experience from './components/Experience';
@@ -15,6 +16,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Story />
         <Journey />
         <Skills />
         <Experience />

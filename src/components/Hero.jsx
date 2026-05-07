@@ -1,12 +1,14 @@
 // ── View: Hero ──
 import React from 'react';
 import { heroData, statsData, siteConfig } from '../data';
+import HeroCanvas from './HeroCanvas';
 import './Hero.css';
 
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero__inner container">
+      <HeroCanvas />
+      <div className="hero__inner container" style={{ position: 'relative', zIndex: 1 }}>
         {/* LEFT TOP — items 1-4 */}
         <div className="hero__left">
           <p className="hero__greeting">Hey! Nirali here, welcome to my little corner of the internet! 👋✨</p>
@@ -29,19 +31,6 @@ export default function Hero() {
                 <p className="hero__stat-l">{s.label}</p>
               </div>
             ))}
-          </div>
-
-          <div className="hero__globe">
-            <p className="hero__globe-title">Global experience</p>
-            <div className="hero__globe-stops">
-              {heroData.countries.map((c, i) => (
-                <div key={i} className="hero__globe-stop">
-                  <span className="hero__globe-flag">{c.flag}</span>
-                  <span className="hero__globe-label">{c.label}</span>
-                  {c.current && <span className="hero__globe-dot" />}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
@@ -69,8 +58,8 @@ export default function Hero() {
           <div className="hero__ctas">
             <a href="#journey" className="btn btn-teal">See full journey</a>
             <a href="#contact" className="btn btn-outline">Get in touch</a>
-            <a href="/Nirali_Khambhati_Resume.pdf" download className="btn btn-outline">
-              ⬇ Download Resume
+            <a href="/Nirali_Khambhati_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+              Resume
             </a>
           </div>
         </div>

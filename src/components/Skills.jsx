@@ -12,7 +12,7 @@ export default function Skills() {
       <div className="section-inner container">
         <div className="s-header">
           <div>
-            <p className="s-num">02 — Skills</p>
+            <p className="s-num">03 — Skills</p>
             <h2 className="s-title">Three pillars<br/>of <em>expertise</em></h2>
           </div>
           <p className="s-right reveal delay-1">

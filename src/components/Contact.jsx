@@ -15,7 +15,7 @@ export default function Contact() {
         <div className="contact__inner">
           {/* Left */}
           <div className="contact__left reveal">
-            <p className="s-num">05 — Let's talk</p>
+            <p className="s-num">06 — Let's talk</p>
             <h2 className="contact__title">
               Open to great<br/><em>opportunities</em>
             </h2>

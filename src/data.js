@@ -28,7 +28,9 @@ export const heroData = {
   kicker: "Healthcare Business Analyst · 5+ years · Boston, MA",
   headline1: "A healthcare professional",
   headline2: "who speaks data.",
-  lead: `Most analysts understand data. I understand what's behind it — the patients, the clinical decisions, the system pressures. That's what makes the difference. Five years across India, Canada, and the US building a career at the crossroads of healthcare and analytics.`,
+  lead: `From dental clinic to data analytics. Three countries. Five roles. One unstoppable career built on clinical intuition and technical depth.`,
+  storyTitle: `NOT A DETOUR. A superpower.`,
+  story: `I started as a dentist. I ended up presenting analytics to the Massachusetts Department of Mental Health. That's not a detour — that's the whole point. Before I ever ran a SQL query, I sat across from patients and understood what health data actually represents. That clinical grounding followed me through two international moves — Canada for health administration, then Boston to double down on informatics and analytics. Today I build dashboards at Elevance Health that reach state government, lead quality improvement cycles, and optimize pipelines over millions of records. My background makes every analysis more meaningful. When I'm not in the data, I'm exploring a new city, trying food I've never heard of, or planning the next adventure. Three countries lived, many more to explore.`,
   transitionSteps: [
     { icon: "🦷", label: "Dentist",      date: "India · 2011",   phase: "dentist" },
     { icon: "🏥", label: "Health Admin", date: "Canada · 2018",  phase: "healthadmin" },
